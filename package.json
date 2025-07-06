@@ -1,14 +1,26 @@
 {
   "name": "turbulent-flux",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "MrWillCom/TurbulentFlux",
+  "homepage": "https://tblf.mrwillcom.com/",
+  "author": "Mr. Will (https://github.com/MrWillCom)",
+  "bugs": {
+    "url": "https://github.com/MrWillCom/TurbulentFlux/issues"
+  },
+  "files": [
+    "src/index.css",
+    "src/index.js"
+  ],
   "scripts": {
     "serve": "serve src",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "changeset": "changeset"
   },
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "serve": "^14.2.4",
+    "prettier": "^3.6.2",
+    "@changesets/cli": "^2.29.5"
   },
-  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184",
-  "dependencies": {
-    "serve": "^14.2.4"
-  }
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
 }
