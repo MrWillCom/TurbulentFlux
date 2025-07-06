@@ -7,4 +7,5 @@
 
 #tblf {
   min-height: 100svh;
+  overflow: hidden;
 }
