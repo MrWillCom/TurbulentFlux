@@ -4,3 +4,7 @@
 :root {
   color-scheme: light dark;
 }
+
+#tblf {
+  min-height: 100svh;
+}

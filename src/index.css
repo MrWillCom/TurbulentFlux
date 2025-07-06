@@ -1,17 +1,11 @@
 .tblf-container {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   filter: blur(var(--tblf-blur-radius));
 }
 
 .tblf-spot {
   width: var(--radius);
   height: var(--radius);
-  position: fixed;
+  position: absolute;
   background-image: radial-gradient(var(--color), transparent);
   border-radius: var(--radius);
   opacity: 0;

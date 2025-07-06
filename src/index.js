@@ -1,5 +1,5 @@
 const DEFAULT_OPTIONS = {
-  minDistance: 500,
+  minDistance: 0.2,
   speed: 0.05,
   spotsCountFactor: 10000,
   saturation: 100,
@@ -17,18 +17,23 @@ class TurbulentFlux {
 
   paused = false
 
-  get windowWidth() {
-    return window.innerWidth
+  get containerWidth() {
+    return this.element.clientWidth
   }
-  get windowHeight() {
-    return window.innerHeight
+  get containerHeight() {
+    return this.element.clientHeight
   }
-  get windowSize() {
-    return this.windowWidth * this.windowHeight
+  get containerSize() {
+    return this.containerWidth * this.containerHeight
+  }
+  get containerDiagonal() {
+    return Math.sqrt(
+      Math.pow(this.containerWidth, 2) + Math.pow(this.containerHeight, 2),
+    )
   }
 
   get spotsCount() {
-    return Math.floor(this.windowSize / this.options.spotsCountFactor)
+    return Math.floor(this.containerSize / this.options.spotsCountFactor)
   }
 
   get randomColor() {
@@ -48,14 +53,14 @@ class TurbulentFlux {
         let from = { x: 0, y: 0 }
         let to = { x: 0, y: 0 }
         let distance = 0
-        while (distance < this.options.minDistance) {
+        while (distance < this.containerDiagonal * this.options.minDistance) {
           from = {
-            x: Math.floor(Math.random() * (window.innerWidth + 1)),
-            y: Math.floor(Math.random() * (window.innerHeight + 1)),
+            x: Math.floor(Math.random() * (this.containerWidth + 1)),
+            y: Math.floor(Math.random() * (this.containerHeight + 1)),
           }
           to = {
-            x: Math.floor(Math.random() * (window.innerWidth + 1)),
-            y: Math.floor(Math.random() * (window.innerHeight + 1)),
+            x: Math.floor(Math.random() * (this.containerWidth + 1)),
+            y: Math.floor(Math.random() * (this.containerHeight + 1)),
           }
           distance = Math.sqrt(
             Math.pow(from.x - to.x, 2) + Math.pow(from.y - to.y, 2),
