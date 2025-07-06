@@ -1,4 +1,5 @@
 {
+  "name": "turbulent-flux",
   "scripts": {
     "serve": "serve src",
     "format": "prettier . --write"
