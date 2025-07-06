@@ -1,54 +1,6 @@
 @import url('https://unpkg.com/normalize.css@8/normalize.css');
+@import url('./index.css');
 
 :root {
   color-scheme: light dark;
-}
-
-#tblf {
-  --radius: 150px;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(var(--radius));
-}
-
-#tblf > .tblf-spot {
-  width: calc(2 * var(--radius));
-  height: calc(2 * var(--radius));
-  position: fixed;
-  background-image: radial-gradient(var(--color), transparent);
-  border-radius: var(--radius);
-  opacity: 0;
-  animation:
-    tblf-spot-animation var(--duration) linear,
-    tblf-spot-fade var(--duration) linear;
-}
-
-@keyframes tblf-spot-animation {
-  0% {
-    left: calc(var(--from-x) - var(--radius));
-    top: calc(var(--from-y) - var(--radius));
-  }
-  100% {
-    left: calc(var(--to-x) - var(--radius));
-    top: calc(var(--to-y) - var(--radius));
-  }
-}
-
-@keyframes tblf-spot-fade {
-  0% {
-    opacity: 0;
-  }
-  15% {
-    opacity: 0.6;
-  }
-  75% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 0;
-  }
 }
