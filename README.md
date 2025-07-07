@@ -2,7 +2,7 @@
 
 TurbulentFlux generates dynamic glow spots in a certain area and update them consistently. → **[Demo](https://tblf.mrwillcom.com/)**
 
-(video here)
+https://github.com/user-attachments/assets/f72298f0-da3e-4b26-9678-b61d5ded4b3e
 
 ## Get Started
 
