@@ -20,7 +20,7 @@ https://github.com/user-attachments/assets/f72298f0-da3e-4b26-9678-b61d5ded4b3e
 Pass options through:
 
 ```js
-new TurbulentFlux(<target element>, options)
+new TurbulentFlux(myContainerElement, myOptions)
 ```
 
 Default options are applied when nothing is passed to the constructor. To tweak the defaults, go to [TurbulentFlux Demo](https://tblf.mrwillcom.com/). Default options can also be found in `src/index.js`.
